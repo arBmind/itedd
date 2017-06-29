@@ -51,7 +51,7 @@ javascript:
 
     toggle_events_link.get(0).onclick = function () {
       console.dir(toggle_events_link);
-      if ($(this).text() == txt_show_all) {
+      if ($(this).text() === txt_show_all) {
         $(this).text(txt_show_user_group);
         load_calendar(#{user_group_id});
       } else {
