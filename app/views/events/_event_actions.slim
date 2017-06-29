@@ -1,4 +1,4 @@
-.social-icon-bar.horizontal.five-up.action-bar.option-bar.right.small_icons.show-only-for-medium-up
+.horizontal.five-up.action-bar.option-bar.right.small_icons.show-only-for-medium-up
   - if can? :destroy, event
     - if event.destroyed?
       = link_to restore_event_path(event), class: 'item', title: 'Ereignis einblenden', method: :get do
