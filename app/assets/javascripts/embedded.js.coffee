@@ -18,13 +18,15 @@ update_code= (item, user_group_id) ->
     content = content.replace /\$WIDTH/, width
     content = content.replace /\$HEIGHT/, height
 
-    $("#embedded_#{item}_iframe").attr('src', final_url)
-    $("#embedded_#{item}_iframe").attr('width', width)
-    $("#embedded_#{item}_iframe").attr('height', height)
+    $("#embedded_#{item}_iframe")
+      .attr('src', final_url)
+      .attr('width', width)
+      .attr('height', height)
 
-    $("#embedded_#{item}_source_textarea").val(content)
-    $("#embedded_#{item}_source_textarea").attr('width', width)
-    $("#embedded_#{item}_source_textarea").attr('height', height)
+    $("#embedded_#{item}_source_textarea")
+      .val(content)
+      .attr('width', width)
+      .attr('height', height)
 
 update_all= (user_group_id) ->
   update_code('list', user_group_id)
