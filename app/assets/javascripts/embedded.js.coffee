@@ -14,9 +14,10 @@ update_code= (item, user_group_id) ->
 
     final_url = final_url + "&width=#{width}&height=#{height}"
 
-    content = $("#embedded_#{item}_source").val().replace /\$URL/, final_url
-    content = content.replace /\$WIDTH/, width
-    content = content.replace /\$HEIGHT/, height
+    content = $("#embedded_#{item}_source").val()
+      .replace /\$URL/, final_url
+      .replace /\$WIDTH/, width
+      .replace /\$HEIGHT/, height
 
     $("#embedded_#{item}_iframe")
       .attr('src', final_url)
