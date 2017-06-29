@@ -33,7 +33,7 @@ gem 'ri_cal'
 gem 'rails-i18n'
 
 # http://foundation.zurb.com/docs/applications.html
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 5.3.3'
 
 # https://github.com/plataformatec/simple_form
 gem 'simple_form'
