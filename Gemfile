@@ -80,3 +80,4 @@ ruby '2.1.7'
 
 gem 'mail'
 gem 'sendgrid-ruby'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
