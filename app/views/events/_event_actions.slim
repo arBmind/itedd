@@ -1,11 +1,11 @@
 .horizontal.five-up.action-bar.option-bar.right.small_icons.show-only-for-medium-up
   - if can? :destroy, event
-    - if event.destroyed?
+    - if event.deleted?
       = link_to restore_event_path(event), class: 'item', title: 'Ereignis einblenden', method: :get do
         i.fi-eye.indicate_deactivation
     - else
       = link_to event_path(event), class: 'item', title: 'Ereignis verstecken', method: :delete do
         i.fi-eye
-  - if can? :update, event
+  - if can? :update, event and not event.deleted?
     = link_to edit_event_path(event), class: 'item', title: 'Ereignis bearbeiten' do
       i.fi-pencil
